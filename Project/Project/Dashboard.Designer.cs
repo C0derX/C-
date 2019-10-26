@@ -28,66 +28,563 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.BunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.Minimize = new Bunifu.Framework.UI.BunifuImageButton();
+            this.Exit = new Bunifu.Framework.UI.BunifuImageButton();
+            this.checkinpanel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lastname = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.roomno = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.firstname = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.roomtype = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.checkintime = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.checkouttime = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.checkinbutton = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.checkoutbutton = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.billbutton = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.updatebutton = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.searchbutton = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.aboutbutton = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Minimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Exit)).BeginInit();
+            this.checkinpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.panel1.Controls.Add(this.aboutbutton);
+            this.panel1.Controls.Add(this.searchbutton);
+            this.panel1.Controls.Add(this.updatebutton);
+            this.panel1.Controls.Add(this.billbutton);
+            this.panel1.Controls.Add(this.checkoutbutton);
+            this.panel1.Controls.Add(this.checkinbutton);
             this.panel1.Location = new System.Drawing.Point(0, 38);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(222, 513);
+            this.panel1.Size = new System.Drawing.Size(223, 521);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(138)))), ((int)(((byte)(7)))));
-            this.panel2.Controls.Add(this.bunifuImageButton2);
-            this.panel2.Controls.Add(this.BunifuImageButton1);
+            this.panel2.Controls.Add(this.Minimize);
+            this.panel2.Controls.Add(this.Exit);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(138)))), ((int)(((byte)(7)))));
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(909, 38);
+            this.panel2.Size = new System.Drawing.Size(914, 38);
             this.panel2.TabIndex = 1;
             // 
-            // bunifuImageButton2
+            // Minimize
             // 
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.SeaGreen;
-            this.bunifuImageButton2.BackgroundImage = global::Project.Properties.Resources.Untitled1;
-            this.bunifuImageButton2.Image = global::Project.Properties.Resources.Untitled1;
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(844, 3);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(30, 32);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton2.TabIndex = 1;
-            this.bunifuImageButton2.TabStop = false;
-            this.bunifuImageButton2.Zoom = 10;
-            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
+            this.Minimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(138)))), ((int)(((byte)(7)))));
+            this.Minimize.Image = ((System.Drawing.Image)(resources.GetObject("Minimize.Image")));
+            this.Minimize.ImageActive = null;
+            this.Minimize.Location = new System.Drawing.Point(841, 0);
+            this.Minimize.Name = "Minimize";
+            this.Minimize.Size = new System.Drawing.Size(38, 38);
+            this.Minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Minimize.TabIndex = 1;
+            this.Minimize.TabStop = false;
+            this.Minimize.Zoom = 10;
+            this.Minimize.Click += new System.EventHandler(this.bunifuImageButton2_Click);
             // 
-            // BunifuImageButton1
+            // Exit
             // 
-            this.BunifuImageButton1.BackColor = System.Drawing.Color.SeaGreen;
-            this.BunifuImageButton1.BackgroundImage = global::Project.Properties.Resources.Untitled1;
-            this.BunifuImageButton1.Image = global::Project.Properties.Resources.close1;
-            this.BunifuImageButton1.ImageActive = null;
-            this.BunifuImageButton1.Location = new System.Drawing.Point(874, 2);
-            this.BunifuImageButton1.Name = "BunifuImageButton1";
-            this.BunifuImageButton1.Size = new System.Drawing.Size(34, 35);
-            this.BunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.BunifuImageButton1.TabIndex = 0;
-            this.BunifuImageButton1.TabStop = false;
-            this.BunifuImageButton1.Zoom = 10;
-            this.BunifuImageButton1.Click += new System.EventHandler(this.close_Click);
+            this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(138)))), ((int)(((byte)(7)))));
+            this.Exit.Image = ((System.Drawing.Image)(resources.GetObject("Exit.Image")));
+            this.Exit.ImageActive = null;
+            this.Exit.Location = new System.Drawing.Point(880, 1);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(34, 37);
+            this.Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Exit.TabIndex = 0;
+            this.Exit.TabStop = false;
+            this.Exit.Zoom = 10;
+            this.Exit.Click += new System.EventHandler(this.close_Click);
+            // 
+            // checkinpanel
+            // 
+            this.checkinpanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkinpanel.Controls.Add(this.checkouttime);
+            this.checkinpanel.Controls.Add(this.checkintime);
+            this.checkinpanel.Controls.Add(this.label6);
+            this.checkinpanel.Controls.Add(this.label7);
+            this.checkinpanel.Controls.Add(this.label5);
+            this.checkinpanel.Controls.Add(this.comboBox1);
+            this.checkinpanel.Controls.Add(this.roomtype);
+            this.checkinpanel.Controls.Add(this.label8);
+            this.checkinpanel.Controls.Add(this.label4);
+            this.checkinpanel.Controls.Add(this.label2);
+            this.checkinpanel.Controls.Add(this.lastname);
+            this.checkinpanel.Controls.Add(this.label1);
+            this.checkinpanel.Controls.Add(this.bunifuMaterialTextbox1);
+            this.checkinpanel.Controls.Add(this.roomno);
+            this.checkinpanel.Controls.Add(this.firstname);
+            this.checkinpanel.Controls.Add(this.label3);
+            this.checkinpanel.Controls.Add(this.bunifuCustomLabel1);
+            this.checkinpanel.Location = new System.Drawing.Point(222, 38);
+            this.checkinpanel.Name = "checkinpanel";
+            this.checkinpanel.Size = new System.Drawing.Size(689, 518);
+            this.checkinpanel.TabIndex = 2;
+            this.checkinpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.label2.Location = new System.Drawing.Point(19, 135);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 21);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Room No ";
+            // 
+            // lastname
+            // 
+            this.lastname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lastname.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lastname.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lastname.HintForeColor = System.Drawing.Color.Black;
+            this.lastname.HintText = "Enter lastname";
+            this.lastname.isPassword = false;
+            this.lastname.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.lastname.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.lastname.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.lastname.LineThickness = 4;
+            this.lastname.Location = new System.Drawing.Point(502, 64);
+            this.lastname.Margin = new System.Windows.Forms.Padding(4);
+            this.lastname.Name = "lastname";
+            this.lastname.Size = new System.Drawing.Size(139, 25);
+            this.lastname.TabIndex = 1;
+            this.lastname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.label1.Location = new System.Drawing.Point(394, 68);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 21);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Last Name ";
+            // 
+            // roomno
+            // 
+            this.roomno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.roomno.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.roomno.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.roomno.HintForeColor = System.Drawing.Color.Black;
+            this.roomno.HintText = "Enter RoomNo";
+            this.roomno.isPassword = false;
+            this.roomno.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.roomno.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.roomno.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.roomno.LineThickness = 4;
+            this.roomno.Location = new System.Drawing.Point(123, 135);
+            this.roomno.Margin = new System.Windows.Forms.Padding(4);
+            this.roomno.Name = "roomno";
+            this.roomno.Size = new System.Drawing.Size(139, 25);
+            this.roomno.TabIndex = 2;
+            this.roomno.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // firstname
+            // 
+            this.firstname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.firstname.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.firstname.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.firstname.HintForeColor = System.Drawing.Color.Black;
+            this.firstname.HintText = "Enter firstname";
+            this.firstname.isPassword = false;
+            this.firstname.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.firstname.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.firstname.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.firstname.LineThickness = 4;
+            this.firstname.Location = new System.Drawing.Point(123, 66);
+            this.firstname.Margin = new System.Windows.Forms.Padding(4);
+            this.firstname.Name = "firstname";
+            this.firstname.Size = new System.Drawing.Size(139, 25);
+            this.firstname.TabIndex = 0;
+            this.firstname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.label3.Location = new System.Drawing.Point(19, 68);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 21);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "First Name ";
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(5, 5);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(80, 21);
+            this.bunifuCustomLabel1.TabIndex = 0;
+            this.bunifuCustomLabel1.Text = "Check In";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.label4.Location = new System.Drawing.Point(394, 135);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(96, 21);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Room Type";
+            // 
+            // roomtype
+            // 
+            this.roomtype.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.roomtype.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomtype.ForeColor = System.Drawing.SystemColors.Window;
+            this.roomtype.FormattingEnabled = true;
+            this.roomtype.Items.AddRange(new object[] {
+            "Single",
+            "Double"});
+            this.roomtype.Location = new System.Drawing.Point(502, 131);
+            this.roomtype.Name = "roomtype";
+            this.roomtype.Size = new System.Drawing.Size(139, 29);
+            this.roomtype.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.label5.Location = new System.Drawing.Point(18, 198);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 21);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Check In";
+            // 
+            // checkintime
+            // 
+            this.checkintime.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkintime.Location = new System.Drawing.Point(123, 197);
+            this.checkintime.Name = "checkintime";
+            this.checkintime.Size = new System.Drawing.Size(139, 23);
+            this.checkintime.TabIndex = 4;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.label6.Location = new System.Drawing.Point(393, 197);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(96, 21);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Check Out";
+            // 
+            // checkouttime
+            // 
+            this.checkouttime.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkouttime.Location = new System.Drawing.Point(502, 195);
+            this.checkouttime.Name = "checkouttime";
+            this.checkouttime.Size = new System.Drawing.Size(139, 23);
+            this.checkouttime.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.label7.Location = new System.Drawing.Point(17, 260);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(96, 21);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "No Of Days";
+            // 
+            // bunifuMaterialTextbox1
+            // 
+            this.bunifuMaterialTextbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Black;
+            this.bunifuMaterialTextbox1.HintText = "Enter Days";
+            this.bunifuMaterialTextbox1.isPassword = false;
+            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.bunifuMaterialTextbox1.LineThickness = 4;
+            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(123, 256);
+            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
+            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(139, 25);
+            this.bunifuMaterialTextbox1.TabIndex = 6;
+            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // checkinbutton
+            // 
+            this.checkinbutton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.checkinbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.checkinbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.checkinbutton.BorderRadius = 0;
+            this.checkinbutton.ButtonText = "Check In";
+            this.checkinbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkinbutton.DisabledColor = System.Drawing.Color.Gray;
+            this.checkinbutton.Iconcolor = System.Drawing.Color.Transparent;
+            this.checkinbutton.Iconimage = null;
+            this.checkinbutton.Iconimage_right = null;
+            this.checkinbutton.Iconimage_right_Selected = null;
+            this.checkinbutton.Iconimage_Selected = null;
+            this.checkinbutton.IconMarginLeft = 0;
+            this.checkinbutton.IconMarginRight = 0;
+            this.checkinbutton.IconRightVisible = true;
+            this.checkinbutton.IconRightZoom = 0D;
+            this.checkinbutton.IconVisible = true;
+            this.checkinbutton.IconZoom = 90D;
+            this.checkinbutton.IsTab = true;
+            this.checkinbutton.Location = new System.Drawing.Point(0, 104);
+            this.checkinbutton.Name = "checkinbutton";
+            this.checkinbutton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.checkinbutton.OnHovercolor = System.Drawing.Color.White;
+            this.checkinbutton.OnHoverTextColor = System.Drawing.SystemColors.GrayText;
+            this.checkinbutton.selected = false;
+            this.checkinbutton.Size = new System.Drawing.Size(223, 48);
+            this.checkinbutton.TabIndex = 0;
+            this.checkinbutton.Text = "Check In";
+            this.checkinbutton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkinbutton.Textcolor = System.Drawing.Color.White;
+            this.checkinbutton.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkinbutton.Click += new System.EventHandler(this.checkinbutton_Click);
+            // 
+            // checkoutbutton
+            // 
+            this.checkoutbutton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.checkoutbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.checkoutbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.checkoutbutton.BorderRadius = 0;
+            this.checkoutbutton.ButtonText = "Check Out";
+            this.checkoutbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkoutbutton.DisabledColor = System.Drawing.Color.Gray;
+            this.checkoutbutton.Iconcolor = System.Drawing.Color.Transparent;
+            this.checkoutbutton.Iconimage = null;
+            this.checkoutbutton.Iconimage_right = null;
+            this.checkoutbutton.Iconimage_right_Selected = null;
+            this.checkoutbutton.Iconimage_Selected = null;
+            this.checkoutbutton.IconMarginLeft = 0;
+            this.checkoutbutton.IconMarginRight = 0;
+            this.checkoutbutton.IconRightVisible = true;
+            this.checkoutbutton.IconRightZoom = 0D;
+            this.checkoutbutton.IconVisible = true;
+            this.checkoutbutton.IconZoom = 90D;
+            this.checkoutbutton.IsTab = true;
+            this.checkoutbutton.Location = new System.Drawing.Point(0, 156);
+            this.checkoutbutton.Name = "checkoutbutton";
+            this.checkoutbutton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.checkoutbutton.OnHovercolor = System.Drawing.Color.White;
+            this.checkoutbutton.OnHoverTextColor = System.Drawing.SystemColors.GrayText;
+            this.checkoutbutton.selected = false;
+            this.checkoutbutton.Size = new System.Drawing.Size(223, 48);
+            this.checkoutbutton.TabIndex = 0;
+            this.checkoutbutton.Text = "Check Out";
+            this.checkoutbutton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkoutbutton.Textcolor = System.Drawing.Color.White;
+            this.checkoutbutton.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkoutbutton.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            // 
+            // billbutton
+            // 
+            this.billbutton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.billbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.billbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.billbutton.BorderRadius = 0;
+            this.billbutton.ButtonText = "Bill";
+            this.billbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.billbutton.DisabledColor = System.Drawing.Color.Gray;
+            this.billbutton.Iconcolor = System.Drawing.Color.Transparent;
+            this.billbutton.Iconimage = null;
+            this.billbutton.Iconimage_right = null;
+            this.billbutton.Iconimage_right_Selected = null;
+            this.billbutton.Iconimage_Selected = null;
+            this.billbutton.IconMarginLeft = 0;
+            this.billbutton.IconMarginRight = 0;
+            this.billbutton.IconRightVisible = true;
+            this.billbutton.IconRightZoom = 0D;
+            this.billbutton.IconVisible = true;
+            this.billbutton.IconZoom = 90D;
+            this.billbutton.IsTab = true;
+            this.billbutton.Location = new System.Drawing.Point(0, 202);
+            this.billbutton.Name = "billbutton";
+            this.billbutton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.billbutton.OnHovercolor = System.Drawing.Color.White;
+            this.billbutton.OnHoverTextColor = System.Drawing.SystemColors.GrayText;
+            this.billbutton.selected = false;
+            this.billbutton.Size = new System.Drawing.Size(223, 48);
+            this.billbutton.TabIndex = 0;
+            this.billbutton.Text = "Bill";
+            this.billbutton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.billbutton.Textcolor = System.Drawing.Color.White;
+            this.billbutton.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.billbutton.Click += new System.EventHandler(this.billbutton_Click);
+            // 
+            // updatebutton
+            // 
+            this.updatebutton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.updatebutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.updatebutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.updatebutton.BorderRadius = 0;
+            this.updatebutton.ButtonText = "Update";
+            this.updatebutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.updatebutton.DisabledColor = System.Drawing.Color.Gray;
+            this.updatebutton.Iconcolor = System.Drawing.Color.Transparent;
+            this.updatebutton.Iconimage = null;
+            this.updatebutton.Iconimage_right = null;
+            this.updatebutton.Iconimage_right_Selected = null;
+            this.updatebutton.Iconimage_Selected = null;
+            this.updatebutton.IconMarginLeft = 0;
+            this.updatebutton.IconMarginRight = 0;
+            this.updatebutton.IconRightVisible = true;
+            this.updatebutton.IconRightZoom = 0D;
+            this.updatebutton.IconVisible = true;
+            this.updatebutton.IconZoom = 90D;
+            this.updatebutton.IsTab = true;
+            this.updatebutton.Location = new System.Drawing.Point(0, 257);
+            this.updatebutton.Name = "updatebutton";
+            this.updatebutton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.updatebutton.OnHovercolor = System.Drawing.Color.White;
+            this.updatebutton.OnHoverTextColor = System.Drawing.SystemColors.GrayText;
+            this.updatebutton.selected = false;
+            this.updatebutton.Size = new System.Drawing.Size(223, 48);
+            this.updatebutton.TabIndex = 0;
+            this.updatebutton.Text = "Update";
+            this.updatebutton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.updatebutton.Textcolor = System.Drawing.Color.White;
+            this.updatebutton.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updatebutton.Click += new System.EventHandler(this.updatebutton_Click);
+            // 
+            // searchbutton
+            // 
+            this.searchbutton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.searchbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.searchbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.searchbutton.BorderRadius = 0;
+            this.searchbutton.ButtonText = "Search";
+            this.searchbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.searchbutton.DisabledColor = System.Drawing.Color.Gray;
+            this.searchbutton.Iconcolor = System.Drawing.Color.Transparent;
+            this.searchbutton.Iconimage = null;
+            this.searchbutton.Iconimage_right = null;
+            this.searchbutton.Iconimage_right_Selected = null;
+            this.searchbutton.Iconimage_Selected = null;
+            this.searchbutton.IconMarginLeft = 0;
+            this.searchbutton.IconMarginRight = 0;
+            this.searchbutton.IconRightVisible = true;
+            this.searchbutton.IconRightZoom = 0D;
+            this.searchbutton.IconVisible = true;
+            this.searchbutton.IconZoom = 90D;
+            this.searchbutton.IsTab = true;
+            this.searchbutton.Location = new System.Drawing.Point(0, 305);
+            this.searchbutton.Name = "searchbutton";
+            this.searchbutton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.searchbutton.OnHovercolor = System.Drawing.Color.White;
+            this.searchbutton.OnHoverTextColor = System.Drawing.SystemColors.GrayText;
+            this.searchbutton.selected = false;
+            this.searchbutton.Size = new System.Drawing.Size(223, 48);
+            this.searchbutton.TabIndex = 0;
+            this.searchbutton.Text = "Search";
+            this.searchbutton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.searchbutton.Textcolor = System.Drawing.Color.White;
+            this.searchbutton.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchbutton.Click += new System.EventHandler(this.searchbutton_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.comboBox1.Location = new System.Drawing.Point(502, 252);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(139, 29);
+            this.comboBox1.TabIndex = 3;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.label8.Location = new System.Drawing.Point(394, 260);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(70, 21);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Gender";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // aboutbutton
+            // 
+            this.aboutbutton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.aboutbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.aboutbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.aboutbutton.BorderRadius = 0;
+            this.aboutbutton.ButtonText = "About";
+            this.aboutbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.aboutbutton.DisabledColor = System.Drawing.Color.Gray;
+            this.aboutbutton.Iconcolor = System.Drawing.Color.Transparent;
+            this.aboutbutton.Iconimage = null;
+            this.aboutbutton.Iconimage_right = null;
+            this.aboutbutton.Iconimage_right_Selected = null;
+            this.aboutbutton.Iconimage_Selected = null;
+            this.aboutbutton.IconMarginLeft = 0;
+            this.aboutbutton.IconMarginRight = 0;
+            this.aboutbutton.IconRightVisible = true;
+            this.aboutbutton.IconRightZoom = 0D;
+            this.aboutbutton.IconVisible = true;
+            this.aboutbutton.IconZoom = 90D;
+            this.aboutbutton.IsTab = true;
+            this.aboutbutton.Location = new System.Drawing.Point(0, 353);
+            this.aboutbutton.Name = "aboutbutton";
+            this.aboutbutton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.aboutbutton.OnHovercolor = System.Drawing.Color.White;
+            this.aboutbutton.OnHoverTextColor = System.Drawing.SystemColors.GrayText;
+            this.aboutbutton.selected = false;
+            this.aboutbutton.Size = new System.Drawing.Size(222, 48);
+            this.aboutbutton.TabIndex = 1;
+            this.aboutbutton.Text = "About";
+            this.aboutbutton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.aboutbutton.Textcolor = System.Drawing.Color.White;
+            this.aboutbutton.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aboutbutton.Click += new System.EventHandler(this.aboutbutton_Click);
             // 
             // Dashboard
             // 
@@ -95,7 +592,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(909, 549);
+            this.ClientSize = new System.Drawing.Size(914, 558);
+            this.Controls.Add(this.checkinpanel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Transparent;
@@ -103,9 +601,12 @@
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
+            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Minimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Exit)).EndInit();
+            this.checkinpanel.ResumeLayout(false);
+            this.checkinpanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -114,7 +615,31 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private Bunifu.Framework.UI.BunifuImageButton BunifuImageButton1;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
+        private Bunifu.Framework.UI.BunifuImageButton Exit;
+        private Bunifu.Framework.UI.BunifuImageButton Minimize;
+        private System.Windows.Forms.Panel checkinpanel;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
+        private System.Windows.Forms.Label label3;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox firstname;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox lastname;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox roomno;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox roomtype;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker checkintime;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker checkouttime;
+        private Bunifu.Framework.UI.BunifuFlatButton checkinbutton;
+        private System.Windows.Forms.Label label7;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
+        private Bunifu.Framework.UI.BunifuFlatButton updatebutton;
+        private Bunifu.Framework.UI.BunifuFlatButton billbutton;
+        private Bunifu.Framework.UI.BunifuFlatButton checkoutbutton;
+        private Bunifu.Framework.UI.BunifuFlatButton searchbutton;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label8;
+        private Bunifu.Framework.UI.BunifuFlatButton aboutbutton;
     }
 }
