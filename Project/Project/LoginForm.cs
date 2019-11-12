@@ -14,6 +14,7 @@ namespace Project
     public partial class LoginForm : Form
     {
         SqlConnection sql = new SqlConnection(@"Server=ANDROID-5VJ4SY8\SQLEXPRESS; Database=dude; Integrated Security=true;");
+
         void savecredientals()
         {
             if (bunifuCheckbox2.Checked == true)
