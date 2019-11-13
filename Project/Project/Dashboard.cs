@@ -29,12 +29,8 @@ namespace Project
             this.WindowState = FormWindowState.Minimized;
         }
 
-
-
         private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        { }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
@@ -85,7 +81,22 @@ namespace Project
 
         private void roomno_OnValueChanged(object sender, EventArgs e)
         {
-
+            int roomNo = 0;
+            try
+            {
+                 roomNo = Convert.ToInt32(roomno.Text);
+            }
+            catch (Exception)
+            {
+                roomNo = 0;
+            }
+            if(roomNo <100)
+            {
+               
+            }else
+            {
+                roomno.Text = "100";
+            }
         }
 
         private void roomno_KeyPress(object sender, KeyPressEventArgs e)
@@ -95,27 +106,12 @@ namespace Project
             {
                 e.Handled = true;
             }
-            else if (roomno.Text.Length <= 100)
-            {
-                e.Handled = false;
-                //MessageBox.Show("Please Input Room Number Less 100","WE HAVE ROOM UPTO 100");
-            }
 
         }
 
-        private void bunifuMaterialTextbox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void peopleno_SelectedIndexChanged(object sender, EventArgs e)
         {
-            char ch = e.KeyChar;
-            if(!char.IsDigit(ch) && ch !=8 && ch != 46)
-            {
-                e.Handled = true;
-            }
-            
-            else if (peopleno.Text.Length <= '4')
-            {
-                e.Handled = false;
-                //MessageBox.Show("Please Input Number Less 4");
-            }
+            var peopletp = peopleno.SelectedIndex.ToString();
         }
 
         private void roomtype_SelectedIndexChanged(object sender, EventArgs e)
@@ -127,14 +123,17 @@ namespace Project
         {
             sql.Open();
 
-            if (checkintime.MinDate < checkouttime.MaxDate)
+            DateTime firstdate = Convert.ToDateTime(checkouttime.Value);
+            DateTime lastdate = Convert.ToDateTime(DateTime.Now);
+
+            if (firstdate<=lastdate)
             {
                 MessageBox.Show("Please FIll The Date Correctly");
             }
 
-            else if (firstname.Text.Length==0 && lastname.Text.Length==0 && roomno.Text.Length == 0 && peopleno.Text.Length ==0 && address.Text.Length==0 && country.Text.Length==0 && roomno.Text.Length==0 )
+            else if (firstname.Text.Length==0 && lastname.Text.Length==0 && roomno.Text.Length == 0 && peopleno.Text.Length ==0 && address.Text.Length==0 && country.Text.Length==0 && roomno.Text.Length==0 && gender.Text.Length==0 && roomtype.Text.Length==0 )
             {
-                MessageBox.Show("Please Fill The Fields Corretly ");
+                MessageBox.Show("Please Fill The EMPTY Fields Corretly ");
             }
 
             else
@@ -156,10 +155,44 @@ namespace Project
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Thank You For CheckIN");
                 }
-
-                sql.Close();
             }
+            sql.Close();
+        }
 
+        private void firstname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsLetter(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void lastname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsLetter(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void address_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsLetter(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void country_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsLetter(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -40,6 +40,7 @@
             this.Minimize = new Bunifu.Framework.UI.BunifuImageButton();
             this.Exit = new Bunifu.Framework.UI.BunifuImageButton();
             this.checkinpanel = new System.Windows.Forms.Panel();
+            this.peopleno = new System.Windows.Forms.ComboBox();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.checkouttime = new System.Windows.Forms.DateTimePicker();
@@ -59,7 +60,6 @@
             this.lastname = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label1 = new System.Windows.Forms.Label();
             this.address = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.peopleno = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.roomno = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.firstname = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label3 = new System.Windows.Forms.Label();
@@ -301,11 +301,11 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(138)))), ((int)(((byte)(7)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
             this.panel2.Controls.Add(this.Minimize);
             this.panel2.Controls.Add(this.Exit);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(138)))), ((int)(((byte)(7)))));
+            this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(914, 38);
@@ -313,10 +313,10 @@
             // 
             // Minimize
             // 
-            this.Minimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(138)))), ((int)(((byte)(7)))));
+            this.Minimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
             this.Minimize.Image = ((System.Drawing.Image)(resources.GetObject("Minimize.Image")));
             this.Minimize.ImageActive = null;
-            this.Minimize.Location = new System.Drawing.Point(841, 0);
+            this.Minimize.Location = new System.Drawing.Point(840, 0);
             this.Minimize.Name = "Minimize";
             this.Minimize.Size = new System.Drawing.Size(38, 38);
             this.Minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -327,10 +327,10 @@
             // 
             // Exit
             // 
-            this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(138)))), ((int)(((byte)(7)))));
+            this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
             this.Exit.Image = ((System.Drawing.Image)(resources.GetObject("Exit.Image")));
             this.Exit.ImageActive = null;
-            this.Exit.Location = new System.Drawing.Point(880, 1);
+            this.Exit.Location = new System.Drawing.Point(879, 1);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(34, 37);
             this.Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -344,6 +344,7 @@
             this.checkinpanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkinpanel.Controls.Add(this.peopleno);
             this.checkinpanel.Controls.Add(this.bunifuFlatButton3);
             this.checkinpanel.Controls.Add(this.bunifuFlatButton1);
             this.checkinpanel.Controls.Add(this.checkouttime);
@@ -363,7 +364,6 @@
             this.checkinpanel.Controls.Add(this.lastname);
             this.checkinpanel.Controls.Add(this.label1);
             this.checkinpanel.Controls.Add(this.address);
-            this.checkinpanel.Controls.Add(this.peopleno);
             this.checkinpanel.Controls.Add(this.roomno);
             this.checkinpanel.Controls.Add(this.firstname);
             this.checkinpanel.Controls.Add(this.label3);
@@ -373,6 +373,24 @@
             this.checkinpanel.Size = new System.Drawing.Size(689, 518);
             this.checkinpanel.TabIndex = 2;
             this.checkinpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // peopleno
+            // 
+            this.peopleno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.peopleno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.peopleno.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.peopleno.ForeColor = System.Drawing.SystemColors.Window;
+            this.peopleno.FormattingEnabled = true;
+            this.peopleno.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.peopleno.Location = new System.Drawing.Point(123, 254);
+            this.peopleno.Name = "peopleno";
+            this.peopleno.Size = new System.Drawing.Size(141, 29);
+            this.peopleno.TabIndex = 12;
+            this.peopleno.SelectedIndexChanged += new System.EventHandler(this.peopleno_SelectedIndexChanged);
             // 
             // bunifuFlatButton3
             // 
@@ -407,7 +425,6 @@
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton3.Click += new System.EventHandler(this.bunifuFlatButton3_Click);
             // 
             // bunifuFlatButton1
             // 
@@ -450,7 +467,7 @@
             this.checkouttime.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkouttime.Location = new System.Drawing.Point(530, 192);
             this.checkouttime.Name = "checkouttime";
-            this.checkouttime.Size = new System.Drawing.Size(139, 23);
+            this.checkouttime.Size = new System.Drawing.Size(142, 23);
             this.checkouttime.TabIndex = 5;
             // 
             // checkintime
@@ -458,7 +475,7 @@
             this.checkintime.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkintime.Location = new System.Drawing.Point(123, 190);
             this.checkintime.Name = "checkintime";
-            this.checkintime.Size = new System.Drawing.Size(139, 23);
+            this.checkintime.Size = new System.Drawing.Size(141, 23);
             this.checkintime.TabIndex = 4;
             // 
             // label6
@@ -545,6 +562,7 @@
             // gender
             // 
             this.gender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.gender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.gender.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gender.ForeColor = System.Drawing.SystemColors.Window;
             this.gender.FormattingEnabled = true;
@@ -553,13 +571,14 @@
             "Female"});
             this.gender.Location = new System.Drawing.Point(530, 252);
             this.gender.Name = "gender";
-            this.gender.Size = new System.Drawing.Size(139, 29);
+            this.gender.Size = new System.Drawing.Size(142, 29);
             this.gender.TabIndex = 7;
             this.gender.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // roomtype
             // 
             this.roomtype.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.roomtype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.roomtype.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roomtype.ForeColor = System.Drawing.SystemColors.Window;
             this.roomtype.FormattingEnabled = true;
@@ -568,7 +587,7 @@
             "Double"});
             this.roomtype.Location = new System.Drawing.Point(530, 126);
             this.roomtype.Name = "roomtype";
-            this.roomtype.Size = new System.Drawing.Size(139, 29);
+            this.roomtype.Size = new System.Drawing.Size(142, 29);
             this.roomtype.TabIndex = 3;
             this.roomtype.SelectedIndexChanged += new System.EventHandler(this.roomtype_SelectedIndexChanged);
             // 
@@ -634,9 +653,10 @@
             this.country.Location = new System.Drawing.Point(530, 318);
             this.country.Margin = new System.Windows.Forms.Padding(4);
             this.country.Name = "country";
-            this.country.Size = new System.Drawing.Size(139, 25);
+            this.country.Size = new System.Drawing.Size(142, 25);
             this.country.TabIndex = 9;
             this.country.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.country.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.country_KeyPress);
             // 
             // lastname
             // 
@@ -654,9 +674,10 @@
             this.lastname.Location = new System.Drawing.Point(530, 64);
             this.lastname.Margin = new System.Windows.Forms.Padding(4);
             this.lastname.Name = "lastname";
-            this.lastname.Size = new System.Drawing.Size(139, 25);
+            this.lastname.Size = new System.Drawing.Size(142, 25);
             this.lastname.TabIndex = 1;
             this.lastname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.lastname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lastname_KeyPress);
             // 
             // label1
             // 
@@ -685,30 +706,10 @@
             this.address.Location = new System.Drawing.Point(123, 312);
             this.address.Margin = new System.Windows.Forms.Padding(4);
             this.address.Name = "address";
-            this.address.Size = new System.Drawing.Size(139, 25);
+            this.address.Size = new System.Drawing.Size(141, 25);
             this.address.TabIndex = 8;
             this.address.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // peopleno
-            // 
-            this.peopleno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.peopleno.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.peopleno.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.peopleno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.peopleno.HintForeColor = System.Drawing.Color.Black;
-            this.peopleno.HintText = "Enter People";
-            this.peopleno.isPassword = false;
-            this.peopleno.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
-            this.peopleno.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
-            this.peopleno.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
-            this.peopleno.LineThickness = 4;
-            this.peopleno.Location = new System.Drawing.Point(123, 250);
-            this.peopleno.Margin = new System.Windows.Forms.Padding(4);
-            this.peopleno.Name = "peopleno";
-            this.peopleno.Size = new System.Drawing.Size(139, 25);
-            this.peopleno.TabIndex = 6;
-            this.peopleno.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.peopleno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bunifuMaterialTextbox1_KeyPress);
+            this.address.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.address_KeyPress);
             // 
             // roomno
             // 
@@ -726,7 +727,7 @@
             this.roomno.Location = new System.Drawing.Point(123, 128);
             this.roomno.Margin = new System.Windows.Forms.Padding(4);
             this.roomno.Name = "roomno";
-            this.roomno.Size = new System.Drawing.Size(139, 25);
+            this.roomno.Size = new System.Drawing.Size(141, 25);
             this.roomno.TabIndex = 2;
             this.roomno.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.roomno.OnValueChanged += new System.EventHandler(this.roomno_OnValueChanged);
@@ -748,9 +749,10 @@
             this.firstname.Location = new System.Drawing.Point(123, 66);
             this.firstname.Margin = new System.Windows.Forms.Padding(4);
             this.firstname.Name = "firstname";
-            this.firstname.Size = new System.Drawing.Size(139, 25);
+            this.firstname.Size = new System.Drawing.Size(141, 25);
             this.firstname.TabIndex = 0;
             this.firstname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.firstname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.firstname_KeyPress);
             // 
             // label3
             // 
@@ -822,7 +824,6 @@
         private System.Windows.Forms.DateTimePicker checkouttime;
         private Bunifu.Framework.UI.BunifuFlatButton checkinbutton;
         private System.Windows.Forms.Label label7;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox peopleno;
         private Bunifu.Framework.UI.BunifuFlatButton updatebutton;
         private Bunifu.Framework.UI.BunifuFlatButton billbutton;
         private Bunifu.Framework.UI.BunifuFlatButton checkoutbutton;
@@ -837,5 +838,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
+        private System.Windows.Forms.ComboBox peopleno;
     }
 }

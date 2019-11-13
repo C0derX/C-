@@ -42,7 +42,10 @@ namespace Project
         {
 
         }
-
+        private void gender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var genderpt = gender.SelectedIndex.ToString();
+        }
 
         private void Label10_Click(object sender, EventArgs e)
         {
@@ -80,7 +83,10 @@ namespace Project
             {
                 MessageBox.Show("Please Insert Your Last Name");
             }
-
+            else if (gender.Text.Length == 0)
+            {
+                MessageBox.Show("Please Select Your Gender");
+            }
             else if (password.Text.Length == 0)
             {
                 MessageBox.Show("Please Enter Your Password");
@@ -104,13 +110,31 @@ namespace Project
 
                 else
                 {
-                    cmd = new SqlCommand("Insert Into userdata(username,firstname,lastname,password) Values('" + usernametxt.Text + "','" + firstname.Text + "','" + lastname.Text + "','" + password.Text + "')", sql);
+                    cmd = new SqlCommand("Insert Into userdata(username,firstname,lastname,gender,password) Values('" + usernametxt.Text + "','" + firstname.Text + "','" + lastname.Text + "','"+gender.Text+"','" + password.Text + "')", sql);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Thank You For Registration");
                 }
             }
 
             sql.Close();
+        }
+
+        private void firstname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsLetter(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void lastname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsLetter(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
         }
     }
 }
