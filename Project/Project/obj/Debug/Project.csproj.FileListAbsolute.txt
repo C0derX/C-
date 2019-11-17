@@ -10,3 +10,5 @@ C:\Users\Acer\source\repos\Project\Project\obj\Debug\Project.pdb
 C:\Users\Acer\source\repos\Project\Project\obj\Debug\Project.csproj.CopyComplete
 C:\Users\Acer\source\repos\Project\Project\obj\Debug\Project.LoginForm.resources
 C:\Users\Acer\source\repos\Project\Project\obj\Debug\Project.Dashboard.resources
+C:\Users\Acer\source\repos\Project\Project\obj\Debug\Project.checkinform.resources
+C:\Users\Acer\source\repos\Project\Project\obj\Debug\Project.checkoutfrom.resources

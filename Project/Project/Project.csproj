@@ -66,6 +66,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="checkinform.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="checkinform.Designer.cs">
+      <DependentUpon>checkinform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="checkoutfrom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="checkoutfrom.Designer.cs">
+      <DependentUpon>checkoutfrom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +98,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="checkinform.resx">
+      <DependentUpon>checkinform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="checkoutfrom.resx">
+      <DependentUpon>checkoutfrom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>

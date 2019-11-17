@@ -17,6 +17,15 @@ namespace Project
             InitializeComponent();
         }
 
+        private void clean()
+        {
+            usernametxt.Text = "";
+            firstname.Text = "";
+            lastname.Text = "";
+            gender.Text = "";
+            password.Text = "";
+        }
+
         private void Panel2_Paint(object sender, PaintEventArgs e)
         {
 
@@ -112,6 +121,7 @@ namespace Project
                 {
                     cmd = new SqlCommand("Insert Into userdata(username,firstname,lastname,gender,password) Values('" + usernametxt.Text + "','" + firstname.Text + "','" + lastname.Text + "','"+gender.Text+"','" + password.Text + "')", sql);
                     cmd.ExecuteNonQuery();
+                    clean();
                     MessageBox.Show("Thank You For Registration");
                 }
             }
