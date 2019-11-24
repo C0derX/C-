@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Project
@@ -26,9 +20,11 @@ namespace Project
             firstname.Text = "";
             lastname.Text = "";
             roomno.Text = "";
-            roomtype.Text = "";
-            peopleno.Text = "";
-            gender.Text = "";
+            roomtype.SelectedIndex = -1;
+            checkintime.Value = DateTime.Now;
+            checkouttime.Value = DateTime.Now;
+            peopleno.SelectedIndex = -1;
+            gender.SelectedIndex = -1;
             address.Text = "";
             country.Text = "";
         }
@@ -178,9 +174,5 @@ namespace Project
             }
         }
 
-        private void checkinform_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

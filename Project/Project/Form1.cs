@@ -22,34 +22,12 @@ namespace Project
             usernametxt.Text = "";
             firstname.Text = "";
             lastname.Text = "";
-            gender.Text = "";
+            gender.SelectedIndex = -1;
             password.Text = "";
         }
-
-        private void Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void PictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Label7_Click(object sender, EventArgs e)
         {
             Application.Exit();
-
-        }
-
-        private void Label9_Click(object sender, EventArgs e)
-        {
-
         }
         private void gender_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -76,7 +54,6 @@ namespace Project
         private void Button1_Click(object sender, EventArgs e)
         {
             sql.Open();
-            var cmd = new SqlCommand();
 
             if (usernametxt.Text.Length == 0)
             {

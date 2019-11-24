@@ -81,7 +81,7 @@
             this.bunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton4.selected = false;
             this.bunifuFlatButton4.Size = new System.Drawing.Size(120, 38);
-            this.bunifuFlatButton4.TabIndex = 35;
+            this.bunifuFlatButton4.TabIndex = 11;
             this.bunifuFlatButton4.Text = "CheckAvailable";
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
@@ -103,7 +103,7 @@
             this.peopleno.Location = new System.Drawing.Point(129, 267);
             this.peopleno.Name = "peopleno";
             this.peopleno.Size = new System.Drawing.Size(141, 29);
-            this.peopleno.TabIndex = 34;
+            this.peopleno.TabIndex = 6;
             this.peopleno.SelectedIndexChanged += new System.EventHandler(this.peopleno_SelectedIndexChanged);
             // 
             // bunifuFlatButton3
@@ -134,7 +134,7 @@
             this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton3.selected = false;
             this.bunifuFlatButton3.Size = new System.Drawing.Size(189, 48);
-            this.bunifuFlatButton3.TabIndex = 29;
+            this.bunifuFlatButton3.TabIndex = 10;
             this.bunifuFlatButton3.Text = "ADD RECORD";
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
@@ -147,7 +147,7 @@
             this.checkouttime.Location = new System.Drawing.Point(536, 205);
             this.checkouttime.Name = "checkouttime";
             this.checkouttime.Size = new System.Drawing.Size(142, 23);
-            this.checkouttime.TabIndex = 19;
+            this.checkouttime.TabIndex = 5;
             // 
             // checkintime
             // 
@@ -155,7 +155,7 @@
             this.checkintime.Location = new System.Drawing.Point(129, 203);
             this.checkintime.Name = "checkintime";
             this.checkintime.Size = new System.Drawing.Size(141, 23);
-            this.checkintime.TabIndex = 18;
+            this.checkintime.TabIndex = 4;
             // 
             // label6
             // 
@@ -214,7 +214,7 @@
             this.gender.Location = new System.Drawing.Point(536, 265);
             this.gender.Name = "gender";
             this.gender.Size = new System.Drawing.Size(142, 29);
-            this.gender.TabIndex = 21;
+            this.gender.TabIndex = 7;
             this.gender.SelectedIndexChanged += new System.EventHandler(this.gender_SelectedIndexChanged);
             // 
             // roomtype
@@ -225,12 +225,12 @@
             this.roomtype.ForeColor = System.Drawing.SystemColors.Window;
             this.roomtype.FormattingEnabled = true;
             this.roomtype.Items.AddRange(new object[] {
-            "Single",
-            "Double"});
+            "Normal",
+            "Standard"});
             this.roomtype.Location = new System.Drawing.Point(536, 139);
             this.roomtype.Name = "roomtype";
             this.roomtype.Size = new System.Drawing.Size(142, 29);
-            this.roomtype.TabIndex = 17;
+            this.roomtype.TabIndex = 3;
             this.roomtype.SelectedIndexChanged += new System.EventHandler(this.roomtype_SelectedIndexChanged);
             // 
             // label10
@@ -294,7 +294,7 @@
             this.country.Margin = new System.Windows.Forms.Padding(4);
             this.country.Name = "country";
             this.country.Size = new System.Drawing.Size(142, 25);
-            this.country.TabIndex = 24;
+            this.country.TabIndex = 9;
             this.country.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.country.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.country_KeyPress);
             // 
@@ -315,7 +315,7 @@
             this.lastname.Margin = new System.Windows.Forms.Padding(4);
             this.lastname.Name = "lastname";
             this.lastname.Size = new System.Drawing.Size(142, 25);
-            this.lastname.TabIndex = 15;
+            this.lastname.TabIndex = 1;
             this.lastname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.lastname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lastname_KeyPress);
             // 
@@ -347,7 +347,7 @@
             this.address.Margin = new System.Windows.Forms.Padding(4);
             this.address.Name = "address";
             this.address.Size = new System.Drawing.Size(141, 25);
-            this.address.TabIndex = 23;
+            this.address.TabIndex = 8;
             this.address.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.address.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.address_KeyPress);
             // 
@@ -368,7 +368,7 @@
             this.roomno.Margin = new System.Windows.Forms.Padding(4);
             this.roomno.Name = "roomno";
             this.roomno.Size = new System.Drawing.Size(141, 25);
-            this.roomno.TabIndex = 16;
+            this.roomno.TabIndex = 2;
             this.roomno.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.roomno.OnValueChanged += new System.EventHandler(this.roomno_OnValueChanged);
             this.roomno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.roomno_KeyPress);
@@ -390,7 +390,7 @@
             this.firstname.Margin = new System.Windows.Forms.Padding(4);
             this.firstname.Name = "firstname";
             this.firstname.Size = new System.Drawing.Size(141, 25);
-            this.firstname.TabIndex = 14;
+            this.firstname.TabIndex = 0;
             this.firstname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.firstname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.firstname_KeyPress);
             // 
@@ -445,7 +445,6 @@
             this.Controls.Add(this.label3);
             this.Name = "checkinform";
             this.Size = new System.Drawing.Size(689, 518);
-            this.Load += new System.EventHandler(this.checkinform_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

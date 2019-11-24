@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Project
@@ -45,11 +38,6 @@ namespace Project
         {
             InitializeComponent();
             loadcredientals();
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void BunifuMaterialTextbox4_OnValueChanged(object sender, EventArgs e)
@@ -96,6 +84,13 @@ namespace Project
                 sql.Close();
 
             }
+        }
+
+        private void backbutton_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            this.Hide();
+            f.ShowDialog();
         }
     }
 }

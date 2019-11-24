@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.username = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -45,6 +46,7 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuCheckbox2 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.label1 = new System.Windows.Forms.Label();
+            this.backbutton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +54,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -59,12 +62,23 @@
             this.panel1.Size = new System.Drawing.Size(337, 511);
             this.panel1.TabIndex = 0;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(45, 319);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(238, 54);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "HOTEL RESERVATION \r\n    LOGIN SYSTEM";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(52, 150);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 53);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(215, 195);
+            this.pictureBox1.Size = new System.Drawing.Size(322, 282);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -225,11 +239,26 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Remember Me";
             // 
+            // backbutton
+            // 
+            this.backbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.backbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backbutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backbutton.ForeColor = System.Drawing.Color.White;
+            this.backbutton.Location = new System.Drawing.Point(375, 373);
+            this.backbutton.Name = "backbutton";
+            this.backbutton.Size = new System.Drawing.Size(118, 33);
+            this.backbutton.TabIndex = 14;
+            this.backbutton.Text = "Back";
+            this.backbutton.UseVisualStyleBackColor = false;
+            this.backbutton.Click += new System.EventHandler(this.backbutton_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(666, 509);
+            this.Controls.Add(this.backbutton);
             this.Controls.Add(this.bunifuCheckbox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label10);
@@ -246,8 +275,8 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
-            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -271,5 +300,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button backbutton;
     }
 }

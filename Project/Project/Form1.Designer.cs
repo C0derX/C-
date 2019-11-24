@@ -84,7 +84,6 @@
             this.label1.Size = new System.Drawing.Size(214, 44);
             this.label1.TabIndex = 1;
             this.label1.Text = "We Create, We Design\r\n       We Develop\r\n";
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // pictureBox1
             // 
@@ -95,7 +94,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // panel2
             // 
@@ -124,7 +122,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(349, 524);
             this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
             // 
             // gender
             // 
@@ -295,7 +292,6 @@
             this.label9.Size = new System.Drawing.Size(169, 21);
             this.label9.TabIndex = 2;
             this.label9.Text = "Already a member ?";
-            this.label9.Click += new System.EventHandler(this.Label9_Click);
             // 
             // label6
             // 
