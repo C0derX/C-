@@ -78,15 +78,6 @@ namespace Project
             updateform1.Hide();
         }
 
-        private void aboutbutton_Click(object sender, EventArgs e)
-        {
-            checkinform1.Hide();
-            checkoutfrom1.Hide();
-            viewform1.Hide();
-            searchform2.Hide();
-            updateform1.Hide();
-        }
-
         private void signout_Click(object sender, EventArgs e)
         {
             LoginForm l = new LoginForm();

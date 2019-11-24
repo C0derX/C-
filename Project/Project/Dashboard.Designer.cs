@@ -31,7 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.aboutbutton = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.signout = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.searchform1 = new Project.searchform();
             this.searchbutton = new Bunifu.Framework.UI.BunifuFlatButton();
             this.updatebutton = new Bunifu.Framework.UI.BunifuFlatButton();
             this.billbutton = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -40,21 +42,18 @@
             this.Exit = new Bunifu.Framework.UI.BunifuImageButton();
             this.Minimize = new Bunifu.Framework.UI.BunifuImageButton();
             this.headpanel = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.updateform1 = new Project.updateform();
             this.viewform1 = new Project.viewform();
-            this.searchform1 = new Project.searchform();
             this.checkoutfrom1 = new Project.checkoutfrom();
             this.checkinform1 = new Project.checkinform();
             this.searchform2 = new Project.searchform();
-            this.label3 = new System.Windows.Forms.Label();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.signout = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimize)).BeginInit();
             this.headpanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,7 +64,6 @@
             this.panel1.Controls.Add(this.signout);
             this.panel1.Controls.Add(this.bunifuImageButton1);
             this.panel1.Controls.Add(this.searchform1);
-            this.panel1.Controls.Add(this.aboutbutton);
             this.panel1.Controls.Add(this.searchbutton);
             this.panel1.Controls.Add(this.updatebutton);
             this.panel1.Controls.Add(this.billbutton);
@@ -77,40 +75,62 @@
             this.panel1.Size = new System.Drawing.Size(223, 521);
             this.panel1.TabIndex = 0;
             // 
-            // aboutbutton
+            // signout
             // 
-            this.aboutbutton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
-            this.aboutbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
-            this.aboutbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.aboutbutton.BorderRadius = 0;
-            this.aboutbutton.ButtonText = "About";
-            this.aboutbutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.aboutbutton.DisabledColor = System.Drawing.Color.Gray;
-            this.aboutbutton.Iconcolor = System.Drawing.Color.Transparent;
-            this.aboutbutton.Iconimage = null;
-            this.aboutbutton.Iconimage_right = null;
-            this.aboutbutton.Iconimage_right_Selected = null;
-            this.aboutbutton.Iconimage_Selected = null;
-            this.aboutbutton.IconMarginLeft = 0;
-            this.aboutbutton.IconMarginRight = 0;
-            this.aboutbutton.IconRightVisible = true;
-            this.aboutbutton.IconRightZoom = 0D;
-            this.aboutbutton.IconVisible = true;
-            this.aboutbutton.IconZoom = 90D;
-            this.aboutbutton.IsTab = true;
-            this.aboutbutton.Location = new System.Drawing.Point(0, 414);
-            this.aboutbutton.Name = "aboutbutton";
-            this.aboutbutton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
-            this.aboutbutton.OnHovercolor = System.Drawing.Color.White;
-            this.aboutbutton.OnHoverTextColor = System.Drawing.SystemColors.GrayText;
-            this.aboutbutton.selected = false;
-            this.aboutbutton.Size = new System.Drawing.Size(222, 37);
-            this.aboutbutton.TabIndex = 5;
-            this.aboutbutton.Text = "About";
-            this.aboutbutton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.aboutbutton.Textcolor = System.Drawing.Color.White;
-            this.aboutbutton.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aboutbutton.Click += new System.EventHandler(this.aboutbutton_Click);
+            this.signout.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.signout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.signout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.signout.BorderRadius = 0;
+            this.signout.ButtonText = "Sign Out";
+            this.signout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.signout.DisabledColor = System.Drawing.Color.Gray;
+            this.signout.Iconcolor = System.Drawing.Color.Transparent;
+            this.signout.Iconimage = null;
+            this.signout.Iconimage_right = null;
+            this.signout.Iconimage_right_Selected = null;
+            this.signout.Iconimage_Selected = null;
+            this.signout.IconMarginLeft = 0;
+            this.signout.IconMarginRight = 0;
+            this.signout.IconRightVisible = true;
+            this.signout.IconRightZoom = 0D;
+            this.signout.IconVisible = true;
+            this.signout.IconZoom = 90D;
+            this.signout.IsTab = true;
+            this.signout.Location = new System.Drawing.Point(3, 412);
+            this.signout.Name = "signout";
+            this.signout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.signout.OnHovercolor = System.Drawing.Color.White;
+            this.signout.OnHoverTextColor = System.Drawing.SystemColors.GrayText;
+            this.signout.selected = false;
+            this.signout.Size = new System.Drawing.Size(222, 33);
+            this.signout.TabIndex = 6;
+            this.signout.Text = "Sign Out";
+            this.signout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.signout.Textcolor = System.Drawing.Color.White;
+            this.signout.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signout.Click += new System.EventHandler(this.signout_Click);
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.bunifuImageButton1.ErrorImage = null;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.InitialImage = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(40, 4);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(150, 164);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 6;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            // 
+            // searchform1
+            // 
+            this.searchform1.Location = new System.Drawing.Point(229, 44);
+            this.searchform1.Name = "searchform1";
+            this.searchform1.Size = new System.Drawing.Size(689, 518);
+            this.searchform1.TabIndex = 5;
             // 
             // searchbutton
             // 
@@ -328,6 +348,17 @@
             this.headpanel.Size = new System.Drawing.Size(916, 38);
             this.headpanel.TabIndex = 1;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(5, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(319, 21);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Hotel Reservation Management System\r\n";
+            // 
             // updateform1
             // 
             this.updateform1.Location = new System.Drawing.Point(224, 38);
@@ -341,13 +372,6 @@
             this.viewform1.Name = "viewform1";
             this.viewform1.Size = new System.Drawing.Size(689, 518);
             this.viewform1.TabIndex = 6;
-            // 
-            // searchform1
-            // 
-            this.searchform1.Location = new System.Drawing.Point(229, 44);
-            this.searchform1.Name = "searchform1";
-            this.searchform1.Size = new System.Drawing.Size(689, 518);
-            this.searchform1.TabIndex = 5;
             // 
             // checkoutfrom1
             // 
@@ -370,73 +394,12 @@
             this.searchform2.Size = new System.Drawing.Size(689, 518);
             this.searchform2.TabIndex = 5;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(5, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(319, 21);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Hotel Reservation Management System\r\n";
-            // 
             // bunifuDragControl1
             // 
             this.bunifuDragControl1.Fixed = true;
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = this.headpanel;
             this.bunifuDragControl1.Vertical = true;
-            // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
-            this.bunifuImageButton1.ErrorImage = null;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.InitialImage = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(40, 4);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(150, 164);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 6;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
-            // 
-            // signout
-            // 
-            this.signout.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
-            this.signout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
-            this.signout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.signout.BorderRadius = 0;
-            this.signout.ButtonText = "Sign Out";
-            this.signout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.signout.DisabledColor = System.Drawing.Color.Gray;
-            this.signout.Iconcolor = System.Drawing.Color.Transparent;
-            this.signout.Iconimage = null;
-            this.signout.Iconimage_right = null;
-            this.signout.Iconimage_right_Selected = null;
-            this.signout.Iconimage_Selected = null;
-            this.signout.IconMarginLeft = 0;
-            this.signout.IconMarginRight = 0;
-            this.signout.IconRightVisible = true;
-            this.signout.IconRightZoom = 0D;
-            this.signout.IconVisible = true;
-            this.signout.IconZoom = 90D;
-            this.signout.IsTab = true;
-            this.signout.Location = new System.Drawing.Point(1, 457);
-            this.signout.Name = "signout";
-            this.signout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
-            this.signout.OnHovercolor = System.Drawing.Color.White;
-            this.signout.OnHoverTextColor = System.Drawing.SystemColors.GrayText;
-            this.signout.selected = false;
-            this.signout.Size = new System.Drawing.Size(222, 33);
-            this.signout.TabIndex = 6;
-            this.signout.Text = "Sign Out";
-            this.signout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.signout.Textcolor = System.Drawing.Color.White;
-            this.signout.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signout.Click += new System.EventHandler(this.signout_Click);
             // 
             // Dashboard
             // 
@@ -460,11 +423,11 @@
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimize)).EndInit();
             this.headpanel.ResumeLayout(false);
             this.headpanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -477,7 +440,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton billbutton;
         private Bunifu.Framework.UI.BunifuFlatButton checkoutbutton;
         private Bunifu.Framework.UI.BunifuFlatButton searchbutton;
-        private Bunifu.Framework.UI.BunifuFlatButton aboutbutton;
         private Bunifu.Framework.UI.BunifuImageButton Exit;
         private Bunifu.Framework.UI.BunifuImageButton Minimize;
         private System.Windows.Forms.Panel headpanel;
